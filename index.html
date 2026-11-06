@@ -215,6 +215,10 @@
   }
   .qa[open] .qa-icon { transform: rotate(45deg); }
   .qa-body { padding: 0 4px 32px; animation: fadeIn .45s var(--ease-out); }
+  .qa-body > p + p:not(.source) { margin-top: 16px; }
+  .source a { text-decoration: underline; text-underline-offset: 2px; }
+  .source a:hover { color: var(--ink); }
+  .source a:focus-visible { outline: 2px solid var(--seaway); outline-offset: 2px; border-radius: 2px; }
   .law {
     border-radius: var(--r-card); padding: 16px 18px; margin-top: 20px;
     background: color-mix(in srgb, var(--pine) 8%, var(--surface));
@@ -475,7 +479,8 @@
           </summary>
           <div class="qa-body measure">
             <p>A data center here would use power from different circuits than the ones that serve Massena homes and businesses. More than a gigawatt of power that used to go to local industry was left unused. That is the power a data center would buy, not the supply to your house.</p>
-            <p class="source">Source: ZeroC Data Centers, written comments to the Massena Town Board, Jan. 22, 2026</p>
+            <p>Our proposed Ratepayer Protection rule would go further. Data centers would pay for any power Massena needs beyond its NYPA hydropower allotment. That extra power is bought at market prices, and it is what drove the January 2026 spike in electric bills. That spike had nothing to do with data centers. It came from Natural Gas (NG) and Liquid Natural Gas (LNG) markets during a cold snap. With Ratepayer Protection in place, data centers would have covered that extra power, and Massena households would have effectively paid less.</p>
+            <p class="source">Source: ZeroC Data Centers, written comments to the Massena Town Board, Jan. 22, 2026. Ratepayer Protection: ZeroC Data Centers proposal, 2026. Winter price drivers: <a href="https://www.nyiso.com/-/natural-gas-prices-this-winter-what-it-means-for-grid-reliability-and-consumers-in-new-york" target="_blank" rel="noopener noreferrer">NYISO</a></p>
           </div>
         </details>
 
@@ -541,7 +546,7 @@
             <span class="qa-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
           </summary>
           <div class="qa-body measure">
-            <p>No. The reason to build here is the hydropower that is already made here and no longer used. The cool climate is a small bonus. The jobs a Level 3 AI data center brings average about $90,000 a year.</p>
+            <p>No. The reason to build here is the hydropower that is already made here and no longer used. The cool climate adds real value too. Cooling makes up about 20% of a modern data center's power costs, and North Country winters let a facility cool with outside air for much of the year. The jobs a Level 3 AI data center brings average about $90,000 a year.</p>
             <p class="source">Source: ZeroC Data Centers, written comments to the Massena Town Board, Jan. 22, 2026</p>
           </div>
         </details>
@@ -567,8 +572,8 @@
             <span class="qa-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
           </summary>
           <div class="qa-body measure">
-            <p>A doctor at the hearing pointed to Montreal as a community with better health. Montreal is also home to several large data centers run by Vantage Data Centers, which says it has seen no health risks from them. Given what this region has been through, it is hard to name a safer kind of industry. We are organizing a tour so residents can see a modern data center for themselves.</p>
-            <p class="source">Source: ZeroC conversation with Vantage Data Centers, reported to the Massena Town Board, Jan. 22, 2026</p>
+            <p>A modern data center has virtually no emissions under normal operations. Closed-loop cooling recirculates the same water, so nothing is drained into the rivers or used up. There are no smokestacks. The only exception is backup power during a grid outage, and Massena's hydro-fed grid is so reliable that backup systems would rarely need to run. Given what this region has been through, it is hard to name a safer kind of industry. We are organizing a tour so residents can see a modern data center for themselves.</p>
+            <p class="source">Source: ZeroC Data Centers, written comments to the Massena Town Board, Jan. 22, 2026</p>
           </div>
         </details>
       </div>
@@ -591,6 +596,10 @@
           <p class="small muted">ZeroC Data Centers to the Massena Town Board, January 22, 2026</p>
           <h3 class="h2 mt-2">Rules we support in the local law</h3>
           <ul class="mt-7 grid gap-6">
+            <li class="flex gap-4">
+              <span class="check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="m2.5 7.5 3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><p class="font-semibold">Ratepayer Protection</p><p class="muted">Data centers would pay for any power Massena needs beyond its NYPA hydropower allotment. Homes keep the low-cost hydropower, rates stay steady through seasonal spikes, and residential rates could come down even further.</p></div>
+            </li>
             <li class="flex gap-4">
               <span class="check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="m2.5 7.5 3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <div><p class="font-semibold">Closed-loop cooling only</p><p class="muted">Other designs would need a variance. Water use stays under DEC permits.</p></div>
