@@ -188,6 +188,7 @@
   }
   .tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--topic); }
   .stat { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 48px; line-height: 52px; letter-spacing: -0.02em; color: var(--topic, var(--seaway)); }
+  .infra-fact { border-top: 3px solid var(--hydro); padding-top: 14px; }
   .watch { border-top: 4px solid var(--brick); }
   .notice-box { background: var(--notice); border-radius: var(--r-panel); }
 
@@ -407,10 +408,31 @@
             <article class="card p-7 topic-pine">
               <span class="tag">Community benefit</span>
               <h3 class="h3 mt-4">A fund the Town controls</h3>
-              <p class="mt-2">A charge of 2 mills (two-tenths of a cent) per unit of data center power could raise $10 to $20 million a year. The Town Board would decide how to use it, such as for health care, a clinic, or cleanup led by Akwesasne.</p>
+              <p class="mt-2">A charge of 2 mills (two-tenths of a cent) per kilowatt-hour (kWh) of data center power could raise $10 to $20 million a year. The Town Board would decide how to use it, which could include funding Downtown Revitalization Initiative (DRI) projects, ratepayer protection from seasonal utility spikes, water service expansion, healthcare, or recreational greenspaces.</p>
               <p class="source">Source: ZeroC proposal to the Massena Town Board, Jan. 22, 2026. Not yet adopted.</p>
             </article>
           </div>
+
+          <article class="card p-7 md:p-9 topic-hydro">
+            <span class="tag">Infrastructure</span>
+            <h3 class="h2 mt-4">Generate it in Massena. Use it in Massena.</h3>
+            <p class="mt-3 measure">Massena already has the lines to send its power away. NYPA’s Smart Path lines carry North Country hydropower south across New York, and a high-voltage tie at Massena connects to Québec’s grid. If the power made here is not used here, those lines will carry it to other communities in New York or across the border, along with the jobs, investment and tax base that follow it.</p>
+            <dl class="mt-7 grid sm:grid-cols-3 gap-5">
+              <div class="infra-fact">
+                <dt class="stat !text-[36px] !leading-[40px]">78 mi</dt>
+                <dd class="mt-2 small">Smart Path: rebuilt lines from Massena to Croghan, finished in 2023.</dd>
+              </div>
+              <div class="infra-fact">
+                <dt class="stat !text-[36px] !leading-[40px]">~100 mi</dt>
+                <dd class="mt-2 small">Smart Path Connect: Massena to Clinton and Croghan to Marcy, finished in 2026.</dd>
+              </div>
+              <div class="infra-fact">
+                <dt class="stat !text-[36px] !leading-[40px]">765 kV</dt>
+                <dd class="mt-2 small">NYPA’s Massena substation, tied to Hydro-Québec’s grid in Canada.</dd>
+              </div>
+            </dl>
+            <p class="source">Sources: NY Governor’s Office, Smart Path completion, June 20, 2023; NYPA, Smart Path Connect project page, 2026; Hydro-Québec TransÉnergie interconnection records</p>
+          </article>
         </div>
 
         <!-- Things to watch (brand rule: every benefit page carries one) -->
@@ -481,7 +503,7 @@
             <p>Clean hydropower is the reason data centers would come here. Elsewhere in the U.S., the most common choice is to build a gas plant next to the data center, which does produce carbon dioxide. Data centers coming to Massena have no plans for that.</p>
             <div class="law">
               <p class="law-title">What the local law can require</p>
-              <p class="mt-1">No carbon-based power generation on site, other than backup power. Because local power is very stable, backup systems would rarely run. DEC emissions rules apply either way.</p>
+              <p class="mt-1">No carbon-based power generation on site, other than backup power. Because local power is very stable, backup systems would rarely run. Rest assured that a rigorous New York State Department of Environmental Conservation (DEC) process for emissions review and approval remains a requirement.</p>
             </div>
             <p class="source">Source: ZeroC Data Centers, written comments to the Massena Town Board, Jan. 22, 2026</p>
           </div>
@@ -533,7 +555,7 @@
             <p>The harm done to Akwesasne by past aluminum industry is real. A new industry can’t take on the full cost of cleaning up after an old one, but it can help pay for the community’s priorities.</p>
             <div class="law">
               <p class="law-title">What the Town can set up</p>
-              <p class="mt-1">A 2-mill charge (two-tenths of a cent) on data center power. That could raise $10 to $20 million a year for the community. The Town Board would decide how it is spent, such as for health care, building a clinic, or cleanup managed by Akwesasne. A steady fund like this could also support borrowing for $200 to $300 million projects.</p>
+              <p class="mt-1">A 2-mill charge (two-tenths of a cent) per kilowatt-hour (kWh) on data center power. That could raise $10 to $20 million a year for the community. The Town Board would decide how it is spent, such as for health care, building a clinic, or cleanup managed by Akwesasne. A steady fund like this could also support borrowing for $200 to $300 million projects.</p>
             </div>
             <p class="source">Source: ZeroC proposal to the Massena Town Board, Jan. 22, 2026. Not yet adopted.</p>
           </div>
@@ -654,7 +676,7 @@
         <h2 class="serif text-[20px]" style="color:var(--ink)">Proud Partners:</h2>
         <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4" aria-label="Partners">
           <li><a class="partner-tile partner-tile--light" href="https://www.zeroc.ai/" target="_blank" rel="noopener noreferrer"><img src="partner_images/ZeroC.png" alt="ZeroC Data Centers (opens in a new tab)" width="763" height="202" loading="lazy"></a></li>
-          <li><a class="partner-tile" href="https://www.americaninfrastructure.ai/" target="_blank" rel="noopener noreferrer"><img src="partner_images/American%20Infrastructure.svg" alt="American Infrastructure (opens in a new tab)" width="1292" height="232" loading="lazy"></a></li>
+          <li><a class="partner-tile partner-tile--light" href="https://www.americaninfrastructure.ai/" target="_blank" rel="noopener noreferrer"><img src="partner_images/AmericanInfrastructure-horizontal-color.svg" alt="American Infrastructure (opens in a new tab)" width="3562" height="730" loading="lazy"></a></li>
         </ul>
       </div>
       <div class="mt-8">
