@@ -242,9 +242,14 @@
   a.partner-tile:active { transform: translateY(0) scale(.98); opacity: .9; }
   a.partner-tile:focus-visible { outline: 3px solid var(--seaway); outline-offset: 3px; border-radius: var(--r-card); }
   .partner-tile--light { background: #ffffff; box-shadow: inset 0 0 0 1px #d9d5ca, var(--shadow-raised); }
-  .supporter-tile { height: 120px; padding: 14px; }
-  .supporter-tile img { max-height: 92px !important; }
-  .supporter-tile--text { font-family: "Source Serif 4", Georgia, serif; font-weight: 700; font-size: 21px; line-height: 1.2; text-align: center; color: #0d1b2a; letter-spacing: -0.02em; }
+  .supporter-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .supporter-grid > li { flex: 0 0 calc((100% - 16px) / 2); }
+  @media (min-width: 640px) { .supporter-grid { gap: 20px; } .supporter-grid > li { flex-basis: calc((100% - 40px) / 3); } }
+  @media (min-width: 1024px) { .supporter-grid { gap: 24px; } .supporter-grid > li { flex-basis: calc((100% - 72px) / 4); } }
+  .supporter-tile { height: 132px; padding: 16px; }
+  .supporter-tile img { max-height: 100px !important; }
+  @media (min-width: 1024px) { .supporter-tile { height: 184px; padding: 22px; } .supporter-tile img { max-height: 140px !important; } }
+  .supporter-tile--text { font-family: "Source Serif 4", Georgia, serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.15; text-align: center; color: #0d1b2a; letter-spacing: -0.02em; }
   .partner-tile img { max-height: 48px; width: auto; max-width: 100%; object-fit: contain; }
   .pier-rule { display: block; width: 100%; height: 44px; color: var(--seaway); opacity: .9; }
 </style>
@@ -676,35 +681,35 @@
 
 <footer class="site-footer" id="about">
   <svg class="pier-rule" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true" id="pierRule"></svg>
-  <div class="wrap py-14 grid md:grid-cols-[1fr_1.4fr] gap-10">
+  <div class="wrap py-14">
     <div>
       <img class="logo-light h-[52px] w-auto -ml-[15px]" src="brand_assets/Massena-ai-Logo-Pack/png/massena-ai-logo-horizontal-full-color.png" alt="Massena.ai" width="174" height="52">
       <img class="logo-dark h-[52px] w-auto -ml-[15px]" src="brand_assets/Massena-ai-Logo-Pack/png/massena-ai-logo-horizontal-reverse.png" alt="Massena.ai" width="174" height="52">
       <p class="serif text-[20px] mt-4" style="color:var(--seaway)">Your town. Your questions. Real answers.</p>
     </div>
-    <div>
-      <div>
-        <h2 class="serif text-[20px]" style="color:var(--ink)">Proud Supporters of:</h2>
-        <ul class="mt-4 grid grid-cols-3 gap-4" aria-label="Organizations we support">
+    <section class="mt-12" aria-labelledby="supporters-h">
+      <h2 id="supporters-h" class="serif text-[24px] md:text-[28px] tracking-[-0.02em]" style="color:var(--ink)">Proud Supporters of:</h2>
+      <ul class="supporter-grid mt-6" aria-label="Organizations we support">
           <li><a class="partner-tile partner-tile--light supporter-tile" href="https://massenapubliclibrary.org/" target="_blank" rel="noopener noreferrer"><img src="supporter_images/transparent-300x296.png" alt="Massena Public Library (opens in a new tab)" width="300" height="296" loading="lazy"></a></li>
           <li><a class="partner-tile partner-tile--light supporter-tile" href="https://fishmassenany.com/" target="_blank" rel="noopener noreferrer"><img src="supporter_images/massena-logofish-massena-final-logo.png" alt="Fish Massena (opens in a new tab)" width="1000" height="770" loading="lazy"></a></li>
           <li><a class="partner-tile partner-tile--light supporter-tile" href="https://fishmassenany.com/b3/" target="_blank" rel="noopener noreferrer"><img src="supporter_images/big-bass-blowout-logo-v2-400.png" alt="Big Bass Blowout (opens in a new tab)" width="400" height="400" loading="lazy"></a></li>
           <li><a class="partner-tile partner-tile--light supporter-tile" href="https://www.facebook.com/p/Massena-Youth-Softball-61588306439837/" target="_blank" rel="noopener noreferrer"><img src="supporter_images/massena-youth-softball-400.jpg" alt="Massena Youth Softball (opens in a new tab)" width="400" height="400" loading="lazy"></a></li>
           <li><a class="partner-tile partner-tile--light supporter-tile" href="https://www.massenalittleleague.com/" target="_blank" rel="noopener noreferrer"><img src="supporter_images/massena-little-league.png" alt="Massena Little League (opens in a new tab)" width="84" height="100" loading="lazy"></a></li>
-          <li><a class="partner-tile partner-tile--light supporter-tile" href="https://massenapal.com/" target="_blank" rel="noopener noreferrer"><img src="supporter_images/pal-massena-badge-onwhite.png" alt="Police Athletic League of Massena (opens in a new tab)" width="600" height="586" loading="lazy"></a></li>
+          <li><a class="partner-tile partner-tile--light supporter-tile" href="https://massenapal.com/" target="_blank" rel="noopener noreferrer"><img src="supporter_images/pal-massena-badge-onwhite.png" alt="Police Activities League of Massena (opens in a new tab)" width="600" height="586" loading="lazy"></a></li>
           <li><a class="partner-tile partner-tile--light supporter-tile supporter-tile--text" href="https://massena.us/395/Massena-Arena" target="_blank" rel="noopener noreferrer"><span>Massena Recreation</span><span class="sr-only"> (opens in a new tab)</span></a></li>
-        </ul>
-      </div>
-      <div class="mt-8">
-        <h2 class="serif text-[20px]" style="color:var(--ink)">Proud Partners:</h2>
-        <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4" aria-label="Partners">
+      </ul>
+    </section>
+    <section class="mt-12" aria-labelledby="partners-h">
+      <h2 id="partners-h" class="serif text-[20px]" style="color:var(--ink)">Proud Partners:</h2>
+      <ul class="mt-4 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[760px]" aria-label="Partners">
           <li><a class="partner-tile partner-tile--light" href="https://www.zeroc.ai/" target="_blank" rel="noopener noreferrer"><img src="partner_images/ZeroC-clean.png" alt="ZeroC Data Centers (opens in a new tab)" width="763" height="202" loading="lazy"></a></li>
           <li><a class="partner-tile partner-tile--light" href="https://www.americaninfrastructure.ai/" target="_blank" rel="noopener noreferrer"><img src="partner_images/AmericanInfrastructure-horizontal-color.svg" alt="American Infrastructure (opens in a new tab)" width="3562" height="730" loading="lazy"></a></li>
-        </ul>
-      </div>
-      <p class="small muted mt-5">Our main source is ZeroC’s written comments to the Massena Town Board, January 22, 2026, after the January 21, 2026 public hearing on data center zoning. <a class="link" href="research/DC%20Public%20Hearing%20Comments%2020260122.pdf">Read the letter</a></p>
-      <p class="muted mt-5 text-[10pt] leading-[1.5]"><strong class="font-semibold">Forward-Looking Statements Disclaimer:</strong> This website contains certain forward-looking statements regarding potential economic, social, or community benefits—including job creation, infrastructure improvements, tax revenues, or technological advantages—associated with hosting an AI data center. These statements are based on current estimations, plans, and projections and are subject to risks and uncertainties. Actual outcomes and community benefits may differ materially due to various factors, including market conditions, regulatory changes, construction delays, and evolving technological demands. We undertake no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise.</p>
-      <p class="muted mt-3 text-[10pt] leading-[1.5]">© 2026 ZeroC Data Centers LLC</p>
+      </ul>
+    </section>
+    <div class="max-w-[860px]">
+        <p class="small muted mt-5">Our main source is ZeroC’s written comments to the Massena Town Board, January 22, 2026, after the January 21, 2026 public hearing on data center zoning. <a class="link" href="research/DC%20Public%20Hearing%20Comments%2020260122.pdf">Read the letter</a></p>
+        <p class="muted mt-5 text-[10pt] leading-[1.5]"><strong class="font-semibold">Forward-Looking Statements Disclaimer:</strong> This website contains certain forward-looking statements regarding potential economic, social, or community benefits—including job creation, infrastructure improvements, tax revenues, or technological advantages—associated with hosting an AI data center. These statements are based on current estimations, plans, and projections and are subject to risks and uncertainties. Actual outcomes and community benefits may differ materially due to various factors, including market conditions, regulatory changes, construction delays, and evolving technological demands. We undertake no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise.</p>
+        <p class="muted mt-3 text-[10pt] leading-[1.5]">© 2026 ZeroC Data Centers LLC</p>
     </div>
   </div>
 </footer>
